@@ -1,0 +1,51 @@
+{
+    "properties": {
+        "name": "blah",
+        "id": "blah",
+        "project": "tests",
+        "environment": {
+            "type": "noflo-browser"
+        }
+    },
+    "inports": {},
+    "outports": {},
+    "groups": [],
+    "processes": {
+        "core/Repeat_fwxg": {
+            "component": "core/Repeat",
+            "metadata": {
+                "label": "core/Repeat",
+                "x": 360,
+                "y": 252
+            }
+        },
+        "prompts/Alert_e8cdb": {
+            "component": "prompts/Alert",
+            "metadata": {
+                "label": "prompts/Alert",
+                "x": 504,
+                "y": 252
+            }
+        }
+    },
+    "connections": [
+        {
+            "src": {
+                "process": "core/Repeat_fwxg",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "prompts/Alert_e8cdb",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "data": "blah",
+            "tgt": {
+                "process": "core/Repeat_fwxg",
+                "port": "in"
+            }
+        }
+    ]
+}
