@@ -19,6 +19,14 @@
                 "y": 252
             }
         },
+        "core/Repeat_fwxg2": {
+            "component": "core/Repeat",
+            "metadata": {
+                "label": "core/Repeat",
+                "x": 720,
+                "y": 504
+            }
+        },
         "prompts/Alert_e8cdb": {
             "component": "prompts/Alert",
             "metadata": {
@@ -31,11 +39,21 @@
     "connections": [
         {
             "src": {
-                "process": "core/Repeat_fwxg",
+                "process": "core/Repeat_fwxg2",
                 "port": "out"
             },
             "tgt": {
                 "process": "prompts/Alert_e8cdb",
+                "port": "in"
+            },
+            "metadata": {}
+        },{
+            "src": {
+                "process": "core/Repeat_fwxg",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "core/Repeat_fwxg2",
                 "port": "in"
             },
             "metadata": {}
